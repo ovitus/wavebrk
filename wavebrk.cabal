@@ -1,0 +1,20 @@
+cabal-version:   3.12
+name:            wavebrk
+version:         1.0
+license:         MIT
+author:          Andrew Wright
+maintainer:      aw@ovit.us
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+executable wavebrk
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:    base ^>=4.17.2.1
+                    , optparse-applicative
+                    , process
+    hs-source-dirs:   app
+    default-language: Haskell2010
